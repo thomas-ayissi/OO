@@ -50,3 +50,7 @@ $moi->afficheForce();
 $moi->afficheForce();
 $moi->afficheForce();
 $toi->afficheForce();
+
+echo "<hr>";
+echo "<h3>Pour afficher une constante, on utilise le nom de la classe séparé par :: le nom de la constante - non modifiable !</h3>";
+echo 'echo Personnage::DIS_BONJOUR : ' . Personnage::DIS_BONJOUR . '<br> Ceci fonctionne aussi mais n\'est pas conseillé : echo $toi::DIS_BONJOUR : ' . $toi::DIS_BONJOUR . '<br>';

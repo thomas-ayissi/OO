@@ -20,7 +20,8 @@ class Personnage
     public $nom = "Anonyme";
     public $experience;
 
-    // Constantes
+    // Constantes, variable non variable, doit être définie, elles sont par défaut publique
+    const DIS_BONJOUR = "coucou";
 
     // Méthodes (fonctions précédées d'une visibilité qui permettent de faire agir l'instance de classe)
 
