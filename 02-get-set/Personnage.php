@@ -47,26 +47,38 @@ class Personnage
 
     public function setNom($s)
     {
-        // remplissage de l'instance
-        $this->nom = $s;
+        if (is_string($s) && strlen($s) > 4 && strlen($s) < 100) {
+            // remplissage de l'instance
+            $this->nom = $s;
+        } else {
+            // création d'une exception
+            trigger_error("Nom non conforme", E_USER_NOTICE);
+            //throw new Exception("Nom non conforme", E_USER_NOTICE);
+        }
     }
     public function setForcePerso($f)
     {
-        $this->forcePerso = $f;
+        if (is_int($f) && !empty($f)) {
+            $this->forcePerso = $f;
+        } else {
+            trigger_error("Force non conforme", E_USER_NOTICE);
+        }
     }
-    public function setDegats($d)
+    public function setDegats(float $d)
     {
-        $this->degats = $d;
+        if ($d >= 0) {
+            $this->degats = $d;
+        }
     }
-    public function setNiveau($n)
+    public function setNiveau(int $n)
     {
         $this->niveau = $n;
     }
-    public function setExperience($e)
+    public function setExperience(int $e)
     {
         $this->experience = $e;
     }
-    public function setVie($v)
+    public function setVie(int $v)
     {
         $this->vie = $v;
     }

@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 require_once 'Personnage.php';
 
 $bilel = new Personnage();
@@ -16,7 +18,7 @@ $bilel->setForcePerso(250);
 echo $bilel->getForcePerso();
 
 echo "<hr>";
-$bilel->setDegats(1.5);
+$bilel->setDegats(1);
 echo $bilel->getDegats();
 
 echo "<hr>";
